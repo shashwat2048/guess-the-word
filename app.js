@@ -4,6 +4,7 @@ let definition = "";
 let wordMap = new Map();
 let guessed = new Set();
 let displayArr = [];
+let firstLoad = true;
 
 const submitBtn     = document.getElementById('submitBtn');
 const inputField    = document.getElementById('inputField');
@@ -15,6 +16,8 @@ const newWordBtn    = document.getElementById('newWordBtn');
 const definitionText= document.getElementById('definition-text');
 const inputArea     = document.getElementById('input-area');
 const bgSound = document.getElementById('bg_sound');
+const loader = document.getElementById('loader');
+const wordLoader = document.getElementById('loader-2');
 bgSound.volume = 0.5;
 inputArea.addEventListener('click', () => {
     bgSound.play();
@@ -55,7 +58,19 @@ async function getValidWord() {
 }
 
 async function initGame() {
+  if(firstLoad) {
+    loader.style.display = "flex";
+    wordLoader.style.display = "flex";
+    firstLoad = false;
+  }
+  else{
+    wordLoader.style.display = "flex";
+  }
   const result = await getValidWord();
+  
+  loader.style.display = "none";
+  wordLoader.style.display = "none";
+
   word = result.w;
   definition = result.def;
   definitionText.textContent = definition;

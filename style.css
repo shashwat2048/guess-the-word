@@ -36,6 +36,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     margin: 1rem auto;
+    position: relative;
   }
   
   #definition-box {
@@ -51,6 +52,7 @@
   .attempted-letters {
     font-size: 1.2rem;
     text-align: center;
+    font-weight: 500;
   }
   
   #secret-word {
@@ -109,5 +111,42 @@
     #definition-box {
       font-size: 1rem;
     }
+  }
+
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(75, 73, 73);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  #loader-2 {
+    position: absolute; 
+    top: 0; left: 0;         
+    width: 100%;
+    height: 100%;
+    background: rgba(107, 115, 102, 0.8);
+    border-radius: 10px;
+    display: none;  
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+  }
+
+  .spinner {
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
   }
   
