@@ -4,7 +4,7 @@ let definition = "";
 let wordMap = new Map();
 let guessed = new Set();
 let displayArr = [];
-let firstLoad = true;
+let firstLoading = true;
 
 const submitBtn     = document.getElementById('submitBtn');
 const inputField    = document.getElementById('inputField');
@@ -58,10 +58,10 @@ async function getValidWord() {
 }
 
 async function initGame() {
-  if(firstLoad) {
+  if(firstLoading) {
     loader.style.display = "flex";
     wordLoader.style.display = "flex";
-    firstLoad = false;
+    firstLoading = false;
   }
   else{
     wordLoader.style.display = "flex";
