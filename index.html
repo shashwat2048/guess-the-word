@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Guesser</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <img src="header_img.png" alt="Game Logo"/>
+  </header>
+
+  <main>
+    <div id="definition-box">
+      <strong>Definition:</strong> <span id="definition-text">Loading...</span>
+    </div>
+
+    <p class="text" id="ack-text"></p>
+    <p id="secret-word"></p>
+
+    <div id="input-area">
+      <label for="inputField">Type one letter:</label>
+      <input type="text" id="inputField" maxlength="1" />
+      <button id="submitBtn">Guess!</button>
+    </div>
+
+    <button id="newWordBtn" style="display: none;">🔁 New Word</button>
+
+    <p class="text" id="chances-text"></p>
+    <p class="attempted-letters"></p>
+  </main>
+  <audio src="bg_sound.mp3" id="bg_sound"></audio>
+  <footer>All rights reserved @WordGuesser 2025</footer>
+  <script src="app.js"></script>
+</body>
+</html>

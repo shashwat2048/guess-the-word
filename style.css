@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVtc3k1OTkzZjhrcWI1eXgyNGFmcHN1MTR3aXV1dnVoOXp1NG1pOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3vReYzcK28FqReAU/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    padding: 1rem;
+    text-align: center;
+  }
+  header img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    margin: 1rem auto;
+  }
+  
+  #definition-box {
+    font-size: 1.2rem;
+    background-color: #fff0cc;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #ccc;
+  }
+  
+  #ack-text,
+  #chances-text,
+  .attempted-letters {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  #secret-word {
+    font-size: 2.5rem;
+    letter-spacing: 0.6rem;
+    text-align: center;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  #input-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #inputField {
+    width: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.3rem;
+    border: 2px solid #333;
+    border-radius: 5px;
+  }
+  
+  #submitBtn, #newWordBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #submitBtn:hover, #newWordBtn:hover {
+    background-color: #555;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  @media screen and (max-width: 500px) {
+    #secret-word {
+      font-size: 1.8rem;
+      letter-spacing: 0.3rem;
+    }
+    #input-area {
+      flex-direction: column;
+    }
+    #definition-box {
+      font-size: 1rem;
+    }
+  }
+  
